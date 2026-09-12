@@ -16,3 +16,105 @@
 @import url('./badges.css');
 @import url('./back-link.css');
 @import url('./footer.css');
+
+.form {
+  margin-top: 36px;
+}
+
+.form>label>input {
+  padding: 8px 16px;
+  border: solid 1px #808080;
+  border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form>label>input:hover {
+  border-color: #000000;
+}
+
+.form>button {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: #4E75FF;
+  color: #ffffff;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form>button:hover {
+  background-color: #6C8CFF;
+}
+
+.gallery {
+  margin-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+.photo-container {
+  border: solid 1px #808080;
+}
+
+.photo {
+  width: 360px;
+  height: 200px;
+}
+
+.description-list {
+  display: flex;
+  font-size: 12px;
+  justify-content: space-around;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loader {
+  --color-1: #fff;
+  --color-2: #ff3d00;
+  --size: 1px;
+
+  width: calc(48 * var(--size));
+  height: calc(48 * var(--size));
+  border: calc(5 * var(--size)) solid var(--color-1);
+  border-bottom-color: var(--color-2);
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+
+  margin: 32px auto;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.load-more {
+  margin: 32px auto;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background-color: #4E75FF;
+  color: #ffffff;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.load-more:hover {
+  background-color: #6C8CFF
+}
